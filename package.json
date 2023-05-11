@@ -4,11 +4,12 @@
   "description": "Example e-commerce website",
   "scripts": {
     "client:dev": "npm start --prefix client",
+    "client:install": "npm install --prefix client",
     "client:build": "npm run build --prefix client",
     "server:dev": "nodemon server/index.js",
     "server:start": "node server/index.js",
     "dev": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
-    "start": "npm run client:build && npm run server:start"
+    "start": "npm run client:install && npm run client:build && npm run server:start"
   },
   "repository": {
     "type": "git",
