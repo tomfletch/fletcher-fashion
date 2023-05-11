@@ -9,7 +9,8 @@
     "server:dev": "nodemon server/index.js",
     "server:start": "node server/index.js",
     "dev": "concurrently \"npm run client:dev\" \"npm run server:dev\"",
-    "start": "npm run client:install && npm run client:build && npm run server:start"
+    "build": "npm run client:install && npm run client:build",
+    "start": "npm run server:start"
   },
   "repository": {
     "type": "git",
