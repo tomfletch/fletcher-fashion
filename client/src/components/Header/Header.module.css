@@ -31,9 +31,9 @@
 
 .header a {
   text-decoration: none;
-  color: var(--clr-text);
+  color: var(--clr-primary);
 }
 
 .header a:hover, .header a:focus-visible {
-  color: var(--clr-text-highlight);
+  color: var(--clr-secondary);
 }

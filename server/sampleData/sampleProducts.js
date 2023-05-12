@@ -11,7 +11,6 @@ module.exports = [
     "description": "An elegant black dress for women, suitable for various formal events.",
     "category": "Women's Clothing",
     "price": 49.99,
-    "discountPrice": 39.99
   },
   {
     "name": "Men's Slim-Fit Jeans",
@@ -32,7 +31,6 @@ module.exports = [
     "description": "A classic leather jacket for men, providing a stylish and rugged look.",
     "category": "Men's Clothing",
     "price": 149.99,
-    "discountPrice": 129.99
   },
   {
     "name": "Women's Denim Jacket",
@@ -46,7 +44,6 @@ module.exports = [
     "description": "A comfortable button-down shirt for men, perfect for a relaxed yet stylish look.",
     "category": "Men's Clothing",
     "price": 34.99,
-    "discountPrice": 27.99
   },
   {
     "name": "Women's Boho Maxi Dress",
@@ -74,6 +71,5 @@ module.exports = [
     "description": "A sophisticated formal suit for men, ideal for special occasions or professional settings.",
     "category": "Men's Clothing",
     "price": 249.99,
-    "discountPrice": 219.99
   }
 ];

@@ -1,15 +1,19 @@
 :root {
-  --clr-text: hsl(200, 95%, 14%);
-  --clr-text-highlight: hsl(200, 95%, 30%);
+  --clr-primary: hsl(200, 95%, 14%);
+  --clr-secondary: hsl(192, 70%, 43%);
+  --clr-accent: hsl(32, 100%, 49%);
 
   --fw-regular: 400;
-  --fw-bold: 700;
+  --fw-bold: 600;
+
+  --br-regular: 0.5rem;
+  --br-small: 0.25rem;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: var(--fw-regular);
-  color: var(--clr-text);
+  color: var(--clr-primary);
 }
 
 .container {

@@ -1,0 +1,46 @@
+.productGridCard {
+
+}
+
+.productImageContainer {
+  position: relative;
+  border-radius: var(--br-regular);
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.saleLabel {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.2rem 0.4rem 0.15rem;
+  border-radius: var(--br-small);
+  background-color: var(--clr-accent);
+  color: white;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.productName {
+  font-size: 0.8rem;
+}
+
+.price {
+  text-align: right;
+}
+
+.currentPrice {
+  font-weight: var(--fw-bold);
+}
+
+.originalPrice {
+  color: hsl(0, 0%, 0%, 0.5);
+  text-decoration: hsl(0, 0%, 0%, 0.1) line-through ;
+  font-size: 0.8rem;
+}
