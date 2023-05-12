@@ -1,0 +1,10 @@
+.productPage {
+  display: flex;
+  gap: 1rem;
+}
+
+.productImageContainer {
+  border-radius: var(--br-regular);
+  overflow: hidden;
+  width: 300px;
+}

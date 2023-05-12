@@ -44,6 +44,6 @@
 
 .originalPrice {
   color: hsl(0, 0%, 0%, 0.5);
-  text-decoration: hsl(0, 0%, 0%, 0.1) line-through ;
+  text-decoration: hsl(0, 0%, 0%, 0.2) line-through ;
   font-size: 0.8rem;
 }

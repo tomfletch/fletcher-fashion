@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import ProductListingPage from './pages/ProductListingPage/ProductListingPage';
 import CartPage from './pages/CartPage/CartPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import ProductPage from './pages/ProductPage/ProductPage';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <ProductListingPage />
+      },
+      {
+        path: 'products/:productId',
+        element: <ProductPage />
       },
       {
         path: 'cart',

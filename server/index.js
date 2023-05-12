@@ -21,6 +21,11 @@ app.get("/api/products", async (req, res) => {
   res.json(products);
 });
 
+app.get("/api/products/:productId", async (req, res) => {
+  const products = await Product.findById(req.params.productId);
+  res.json(products);
+});
+
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 app.get('**', function (req, res) {

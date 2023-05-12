@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Product from '../../models/product';
 import styles from './ProductGridItem.module.css';
 
@@ -10,7 +11,7 @@ function ProductGridItem({ product }: ProductGridItemProps) {
   const currentPrice = isOnSale ? product.discountPrice : product.price;
 
   return (
-    <div className={styles.productGridItem}>
+    <Link to={`/products/${product._id}`} className={styles.productGridItem}>
       <div className={styles.productImageContainer}>
         <img src={`https://picsum.photos/seed/${product._id}/350/400`} alt="" />
         {isOnSale && (
@@ -26,7 +27,7 @@ function ProductGridItem({ product }: ProductGridItemProps) {
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
