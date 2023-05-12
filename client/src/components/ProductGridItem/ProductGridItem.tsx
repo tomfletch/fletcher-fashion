@@ -1,16 +1,16 @@
 import Product from '../../models/product';
-import styles from './ProductGridCard.module.css';
+import styles from './ProductGridItem.module.css';
 
-type ProductGridCardProps = {
-  product: Product
-}
+type ProductGridItemProps = {
+  product: Product;
+};
 
-function ProductGridCard({ product }: ProductGridCardProps) {
+function ProductGridItem({ product }: ProductGridItemProps) {
   const isOnSale = !!product.discountPrice;
   const currentPrice = isOnSale ? product.discountPrice : product.price;
 
   return (
-    <div className={styles.productGridCard}>
+    <div className={styles.productGridItem}>
       <div className={styles.productImageContainer}>
         <img src={`https://picsum.photos/seed/${product._id}/350/400`} alt="" />
         {isOnSale && (
@@ -30,4 +30,4 @@ function ProductGridCard({ product }: ProductGridCardProps) {
   );
 }
 
-export default ProductGridCard;
+export default ProductGridItem;

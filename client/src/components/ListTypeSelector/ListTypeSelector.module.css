@@ -1,0 +1,25 @@
+.listTypeSelector button {
+  background-color: #eee;
+  color: var(--clr-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.listTypeSelector button:hover, .listTypeSelector button:focus-visible {
+  background-color: #ddd;
+}
+
+.listTypeSelector button:first-child {
+  border-top-left-radius: var(--br-small);
+  border-bottom-left-radius: var(--br-small);
+}
+
+.listTypeSelector button:last-child {
+  border-top-right-radius: var(--br-small);
+  border-bottom-right-radius: var(--br-small);
+}
+
+.listTypeSelector button[aria-pressed="true"] {
+  background-color: var(--clr-primary);
+  color: white;
+}

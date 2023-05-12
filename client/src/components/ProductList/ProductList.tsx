@@ -1,9 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import { getProducts } from '../../api';
-import ProductGridCard from '../ProductGridCard/ProductGridCard';
+import ProductGridItem from '../ProductGridItem/ProductGridItem';
+import ProductRowItem from '../ProductRowItem/ProductRowItem';
 import styles from './ProductList.module.css';
 
-function ProductList() {
+type ProductListProps = {
+  listType?: 'grid' | 'row';
+};
+
+function ProductList({ listType = 'grid' }: ProductListProps) {
   const { isLoading, error, data } = useQuery({
     queryKey: ['products'],
     queryFn: getProducts
@@ -13,9 +18,13 @@ function ProductList() {
   if (error) return <>Error</>;
 
   return (
-    <div className={styles.productList}>
+    <div className={`${styles.productList} ${listType === 'grid' ? styles.grid : styles.row}`}>
       {data.map((product: any) => (
-        <ProductGridCard key={product._id} product={product} />
+        listType === 'grid' ? (
+          <ProductGridItem key={product._id} product={product} />
+        ) : (
+          <ProductRowItem key={product._id} product={product} />
+        )
       ))}
     </div>
   );

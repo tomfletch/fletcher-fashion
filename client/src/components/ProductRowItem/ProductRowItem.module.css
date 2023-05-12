@@ -1,12 +1,13 @@
-.productGridCard {
-
+.productRowItem {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0.5rem;
 }
 
 .productImageContainer {
   position: relative;
   border-radius: var(--br-regular);
   overflow: hidden;
-  margin-bottom: 0.5rem;
 }
 
 .saleLabel {
@@ -23,16 +24,18 @@
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .productName {
   font-size: 0.8rem;
 }
 
-.price {
-  text-align: right;
+.productName {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
 }
 
 .currentPrice {
