@@ -1,22 +1,24 @@
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header() {
   return (
     <header className="container">
       <div className={styles.header}>
-        <a href="/" className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           Fletcher<span>Fashion</span>
-        </a>
+        </Link>
         <nav>
           <ul className={styles.navList}>
-            <li><a href="/">All Products</a></li>
-            <li><a href="#mens">Men's</a></li>
-            <li><a href="#womens">Women's</a></li>
+            <li><Link to="/">All Products</Link></li>
+            <li><Link to="/sale">Sale</Link></li>
+            <li><Link to="/mens">Men's</Link></li>
+            <li><Link to="/womens">Women's</Link></li>
           </ul>
         </nav>
-        <a href="#cart" aria-label="Shopping Cart">
+        <Link to="cart" aria-label="Your Shopping Cart">
           <i className="fa-solid fa-cart-shopping"></i>
-        </a>
+        </Link>
       </div>
     </header>
   )

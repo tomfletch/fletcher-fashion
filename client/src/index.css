@@ -2,6 +2,7 @@
   --clr-primary: hsl(200, 95%, 14%);
   --clr-secondary: hsl(192, 70%, 43%);
   --clr-accent: hsl(32, 100%, 49%);
+  --clr-accent-darker: hsl(32, 100%, 45%);
 
   --fw-regular: 400;
   --fw-bold: 600;
@@ -20,4 +21,37 @@ body {
   padding-inline: 1rem;
   margin-inline: auto;
   max-width: 1000px;
+}
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: var(--br-regular);
+  padding: 0.5rem 1rem;
+  line-height: 1;
+}
+
+.btn:focus-visible {
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--clr-accent);
+  color: white;
+}
+
+.btn-primary:hover, .btn-primary:focus-visible {
+  background-color: var(--clr-accent-darker);
+}
+
+.btn-ghost {
+  border: 2px solid var(--clr-secondary);
+  color: var(--clr-secondary);
+}
+
+.btn-ghost:hover, .btn-ghost:focus-visible {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
 }
