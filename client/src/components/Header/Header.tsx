@@ -12,8 +12,8 @@ function Header() {
           <ul className={styles.navList}>
             <li><Link to="/">All Products</Link></li>
             <li><Link to="/sale">Sale</Link></li>
-            <li><Link to="/mens">Men's</Link></li>
-            <li><Link to="/womens">Women's</Link></li>
+            <li><Link to="/men">Men</Link></li>
+            <li><Link to="/women">Women</Link></li>
           </ul>
         </nav>
         <Link to="cart" aria-label="Your Shopping Cart">
