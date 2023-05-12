@@ -37,3 +37,10 @@
 .header a:hover, .header a:focus-visible {
   color: var(--clr-secondary);
 }
+
+.cartQuantity {
+  padding: 0.1rem 0.5rem;
+  border-radius: 100vw;
+  background-color: var(--clr-accent);
+  color: white;
+}

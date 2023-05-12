@@ -8,3 +8,28 @@
   overflow: hidden;
   width: 300px;
 }
+
+.content {
+  flex-grow: 1;
+}
+
+.description {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.currentPrice {
+  font-size: 1.1rem;
+  font-weight: var(--fw-bold);
+}
+
+.originalPrice {
+  color: hsl(0, 0%, 0%, 0.5);
+  text-decoration: hsl(0, 0%, 0%, 0.2) line-through ;
+  font-size: 0.8rem;
+}
+
+.cartOptions {
+  margin-top: 2rem;
+}

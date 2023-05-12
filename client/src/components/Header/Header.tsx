@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
+import { useShoppingCartContext } from '../../context/ShoppingCardContext';
 
 function Header() {
+  const { totalQuantity } = useShoppingCartContext();
+
   return (
     <header className="container">
       <div className={styles.header}>
@@ -17,6 +20,9 @@ function Header() {
           </ul>
         </nav>
         <Link to="cart" aria-label="Your Shopping Cart">
+          {totalQuantity !== 0 && (
+            <span className={styles.cartQuantity}>{totalQuantity}</span>
+          )}
           <i className="fa-solid fa-cart-shopping"></i>
         </Link>
       </div>

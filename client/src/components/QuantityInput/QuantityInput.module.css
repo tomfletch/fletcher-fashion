@@ -1,0 +1,23 @@
+.quantityInput {
+  display: flex;
+  align-items: stretch;
+  width: 170px;
+}
+
+.quantityInput button:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.quantityInput button:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.value {
+  display: grid;
+  place-items: center;
+  padding-inline: 1.5rem;
+  flex-grow: 1;
+  background-color: #eee;
+}

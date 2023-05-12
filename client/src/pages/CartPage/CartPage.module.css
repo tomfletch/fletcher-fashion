@@ -1,0 +1,18 @@
+.cartTable {
+  width: 100%;
+}
+
+.cartItem td {
+  border-bottom: 1px solid #eee;
+  padding-block: 1rem;
+}
+
+.productImageContainer {
+  border-radius: var(--br-regular);
+  overflow: hidden;
+  width: 50px;
+}
+
+.productName {
+  font-weight: var(--fw-bold);
+}
