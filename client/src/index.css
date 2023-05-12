@@ -1,0 +1,19 @@
+:root {
+  --clr-text: hsl(200, 95%, 14%);
+  --clr-text-highlight: hsl(200, 95%, 30%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: var(--fw-regular);
+  color: var(--clr-text);
+}
+
+.container {
+  padding-inline: 1rem;
+  margin-inline: auto;
+  max-width: 1000px;
+}

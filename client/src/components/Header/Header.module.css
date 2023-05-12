@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-block: 2rem;
+}
+
+.header nav {
+  flex: 1;
+}
+
+.logo {
+  font-size: 1.2rem;
+}
+
+.logo span {
+  font-weight: var(--fw-bold);
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navList a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+.header a:hover, .header a:focus-visible {
+  color: var(--clr-text-highlight);
+}
