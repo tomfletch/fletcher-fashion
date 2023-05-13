@@ -11,7 +11,7 @@ function QuantityInput({ value, onDecrement, onIncrement }: QuantityInputProps) 
     <div className={styles.quantityInput}>
       <button
         type="button"
-        className="btn btn-primary"
+        className="btn"
         aria-label="Decrement quantity"
         onClick={() => onDecrement()}
       >
@@ -20,7 +20,7 @@ function QuantityInput({ value, onDecrement, onIncrement }: QuantityInputProps) 
       <span className={styles.value}>{value}</span>
       <button
         type="button"
-        className="btn btn-primary"
+        className="btn"
         aria-label="Increment quantity"
         onClick={() => onIncrement()}
       >

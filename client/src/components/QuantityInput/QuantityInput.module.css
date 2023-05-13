@@ -1,23 +1,27 @@
 .quantityInput {
   display: flex;
   align-items: stretch;
-  width: 170px;
+  width: 140px;
+  border: 1px solid var(--clr-primary);
+  border-radius: var(--br-regular);
+  color: var(--clr-primary);
+  overflow: hidden;
+  font-weight: var(--fw-semibold);
 }
 
-.quantityInput button:first-of-type {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+.quantityInput button {
+  border-radius: 0;
+  color: var(--clr-primary);
+  padding: 0.5rem 1rem;
 }
 
-.quantityInput button:last-of-type {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+.quantityInput button:hover, .quantityInput button:focus-visible {
+  background-color: var(--clr-primary);
+  color: white;
 }
 
 .value {
   display: grid;
   place-items: center;
-  padding-inline: 1.5rem;
   flex-grow: 1;
-  background-color: #eee;
 }
