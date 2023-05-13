@@ -1,22 +1,22 @@
 .productGridItem {
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--clr-primary);
+  color: var(--clr-text);
   isolation: isolate;
 }
 
 .productGridItem::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -0.5rem;
   background-color: #eee;
   z-index: -1;
   border-radius: var(--br-regular);
-  border: 1px solid hsl(0, 0%, 0%, 0.1);
   opacity: 0;
-  transition: opacity 100ms ease-in-out, scale 100ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }
 
 .productGridItem:focus-visible {
@@ -25,7 +25,6 @@
 
 .productGridItem:hover::before, .productGridItem:focus-visible::before {
   opacity: 1;
-  scale: 1.05;
 }
 
 .productImageContainer {
@@ -54,10 +53,12 @@
 
 .productName {
   font-size: 0.8rem;
+  font-weight: var(--fw-semibold);
 }
 
 .price {
   text-align: right;
+  color: var(--clr-primary);
 }
 
 .currentPrice {

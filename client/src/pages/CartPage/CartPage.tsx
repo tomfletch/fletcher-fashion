@@ -6,7 +6,7 @@ function CartPage() {
   const { items, removeItem, addItem } = useShoppingCartContext();
 
   return (
-    <>
+    <div className={styles.cartPage}>
       <h1>Your Shopping Cart</h1>
       {items.length === 0 ? (
         <p>Your shopping cart is currently empty.</p>
@@ -31,7 +31,7 @@ function CartPage() {
           ))}
         </table>
       )}
-    </>
+    </div>
   );
 }
 

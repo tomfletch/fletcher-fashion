@@ -25,6 +25,8 @@
 }
 
 .navList a {
+  font-size: 0.9rem;
+  font-weight: var(--fw-semibold);
   display: inline-block;
   padding-block: 0.375rem;
   margin-inline: 0.75rem;
@@ -32,15 +34,16 @@
 
 .navList a:global(.active) {
   border-bottom: 2px solid var(--clr-primary);
+  color: var(--clr-primary);
 }
 
 .header a {
   text-decoration: none;
-  color: var(--clr-primary);
+  color: var(--clr-text);
 }
 
 .header a:hover, .header a:focus-visible {
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 
 .cartQuantity {
