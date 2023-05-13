@@ -30,10 +30,11 @@
   display: inline-block;
   padding-block: 0.375rem;
   margin-inline: 0.75rem;
+  border-bottom: 2px solid transparent;
 }
 
 .navList a:global(.active) {
-  border-bottom: 2px solid var(--clr-primary);
+  border-bottom-color: var(--clr-primary);
   color: var(--clr-primary);
 }
 
