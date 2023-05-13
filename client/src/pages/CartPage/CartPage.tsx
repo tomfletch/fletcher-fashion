@@ -12,23 +12,25 @@ function CartPage() {
         <p>Your shopping cart is currently empty.</p>
       ) : (
         <table className={styles.cartTable}>
-          {items.map((item) => (
-            <tr className={styles.cartItem}>
-              <td>
-                <div className={styles.productImageContainer}>
-                  <img src={`https://picsum.photos/seed/${item.product._id}/350/400`} alt="" />
-                </div>
-              </td>
-              <td className={styles.productName}>{item.product.name}</td>
-              <td>
-                <QuantityInput
-                  value={item.quantity}
-                  onDecrement={() => removeItem(item.product)}
-                  onIncrement={() => addItem(item.product)}
-                />
-              </td>
-            </tr>
-          ))}
+          <tbody>
+            {items.map((item) => (
+              <tr key={item.product._id} className={styles.cartItem}>
+                <td>
+                  <div className={styles.productImageContainer}>
+                    <img src={`https://picsum.photos/seed/${item.product._id}/350/400`} alt="" />
+                  </div>
+                </td>
+                <td className={styles.productName}>{item.product.name}</td>
+                <td>
+                  <QuantityInput
+                    value={item.quantity}
+                    onDecrement={() => removeItem(item.product)}
+                    onIncrement={() => addItem(item.product)}
+                  />
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       )}
     </div>
