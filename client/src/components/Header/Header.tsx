@@ -19,7 +19,7 @@ function Header() {
             <li><NavLink to="/women">Women</NavLink></li>
           </ul>
         </nav>
-        <NavLink to="cart" aria-label="Your Shopping Cart">
+        <NavLink className={styles.cartLink} to="cart" aria-label="Your Shopping Cart">
           {totalQuantity !== 0 && (
             <span className={styles.cartQuantity}>{totalQuantity}</span>
           )}

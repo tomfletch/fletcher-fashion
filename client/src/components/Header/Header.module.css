@@ -10,7 +10,7 @@
 }
 
 .logo {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .logo span {
@@ -46,9 +46,20 @@
   color: var(--clr-primary);
 }
 
+.cartLink {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.cartLink:global(.active) {
+  color: var(--clr-primary);
+}
+
 .cartQuantity {
-  padding: 0.1rem 0.5rem;
+  padding: 0 0.4rem;
   border-radius: 100vw;
   background-color: var(--clr-accent);
   color: white;
+  font-size: 0.8rem;
 }
