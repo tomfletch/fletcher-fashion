@@ -1,4 +1,5 @@
-import Product from '../../models/product';
+import { Product } from '../../models/product';
+import { formatCurrency } from '../../utils/currency';
 import styles from './ProductRowItem.module.css';
 
 type ProductRowItemProps = {
@@ -7,7 +8,7 @@ type ProductRowItemProps = {
 
 function ProductRowItem({ product }: ProductRowItemProps) {
   const isOnSale = !!product.discountPrice;
-  const currentPrice = isOnSale ? product.discountPrice : product.price;
+  const currentPrice = product.discountPrice || product.price;
 
   return (
     <div className={styles.productRowItem}>
@@ -21,9 +22,9 @@ function ProductRowItem({ product }: ProductRowItemProps) {
         <div className={styles.productName}>{product.name}</div>
         <p className={styles.description}>{product.description}</p>
         <div className={styles.price}>
-          <div className={styles.currentPrice}>£{currentPrice}</div>
+          <div className={styles.currentPrice}>{formatCurrency(currentPrice)}</div>
           {isOnSale && (
-            <div className={styles.originalPrice}>£{product.price}</div>
+            <div className={styles.originalPrice}>{formatCurrency(product.price)}</div>
           )}
         </div>
       </div>

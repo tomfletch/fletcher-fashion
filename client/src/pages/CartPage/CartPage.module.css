@@ -20,3 +20,17 @@
 .productName {
   font-weight: var(--fw-semibold);
 }
+
+.colPrice {
+  text-align: right;
+}
+
+.totalPrice {
+  text-align: right;
+  margin-block: 2rem;
+}
+
+.totalPrice .label {
+  font-weight: var(--fw-semibold);
+  margin-right: 1rem;
+}

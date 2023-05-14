@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import { getProducts } from '../../api';
+import { getProducts } from '../../utils/api';
 import ProductGridItem from '../ProductGridItem/ProductGridItem';
 import ProductRowItem from '../ProductRowItem/ProductRowItem';
 import styles from './ProductList.module.css';
-import Product from '../../models/product';
+import { Product } from '../../models/product';
 
 type ProductListProps = {
   listType?: 'grid' | 'row';

@@ -1,4 +1,4 @@
-type Product = {
+export type Product = {
   _id: string;
   name: string;
   description: string;
@@ -6,5 +6,3 @@ type Product = {
   price: number;
   discountPrice?: number;
 };
-
-export default Product;

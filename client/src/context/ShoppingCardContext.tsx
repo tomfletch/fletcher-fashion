@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useMemo, useState } from 'react';
-import Product from '../models/product';
+import { Product } from '../models/product';
 
 type ShoppingCartItem = {
   product: Product;

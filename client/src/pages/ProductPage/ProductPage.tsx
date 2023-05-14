@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
-import { getProduct } from '../../api';
+import { getProduct } from '../../utils/api';
 import styles from './ProductPage.module.css';
 import { useShoppingCartContext } from '../../context/ShoppingCardContext';
 import QuantityInput from '../../components/QuantityInput/QuantityInput';
+import { formatCurrency } from '../../utils/currency';
 
 function ProductPage() {
   const { productId } = useParams();
@@ -18,7 +19,7 @@ function ProductPage() {
   if (error) return <>Error</>;
 
   const isOnSale = !!product.discountPrice;
-  const currentPrice = isOnSale ? product.discountPrice : product.price;
+  const currentPrice = product.discountPrice || product.price;
 
   const shoppingCartItem = getItem(productId!);
   const shoppingCartQuantity = shoppingCartItem?.quantity || 0;
@@ -31,9 +32,9 @@ function ProductPage() {
       <div className={styles.content}>
         <h1>{product.name}</h1>
         <p className={styles.description}>{product.description}</p>
-        <p className={styles.currentPrice}>£{currentPrice}</p>
+        <p className={styles.currentPrice}>{formatCurrency(currentPrice)}</p>
         {isOnSale && (
-          <p className={styles.originalPrice}>£{product.price}</p>
+          <p className={styles.originalPrice}>{formatCurrency(product.price)}</p>
         )}
         <div className={styles.cartOptions}>
           {shoppingCartQuantity === 0 ? (
