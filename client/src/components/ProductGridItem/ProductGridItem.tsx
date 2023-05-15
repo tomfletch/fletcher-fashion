@@ -14,7 +14,7 @@ function ProductGridItem({ product }: ProductGridItemProps) {
   return (
     <Link to={`/products/${product._id}`} className={styles.productGridItem}>
       <div className={styles.productImageContainer}>
-        <img src={`https://picsum.photos/seed/${product._id}/350/400`} alt="" />
+        <img src={`/images/${product.image}`} alt="" />
         {isOnSale && (
           <div className={styles.saleLabel}>Sale</div>
         )}

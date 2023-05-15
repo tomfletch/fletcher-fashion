@@ -27,7 +27,7 @@ function ProductPage() {
   return (
     <div className={styles.productPage}>
       <div className={styles.productImageContainer}>
-        <img src={`https://picsum.photos/seed/${product._id}/350/400`} alt="" />
+        <img src={`/images/${product.image}`} alt="" />
       </div>
       <div className={styles.content}>
         <h1>{product.name}</h1>

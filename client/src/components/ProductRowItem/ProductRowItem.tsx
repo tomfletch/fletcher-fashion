@@ -15,7 +15,7 @@ function ProductRowItem({ product }: ProductRowItemProps) {
     <div className={styles.productRowItem}>
       <Link to={`/products/${product._id}`}>
         <div className={styles.productImageContainer}>
-          <img src={`https://picsum.photos/seed/${product._id}/350/400`} alt="" />
+          <img src={`/images/${product.image}`} alt="" />
           {isOnSale && (
             <div className={styles.saleLabel}>Sale</div>
           )}

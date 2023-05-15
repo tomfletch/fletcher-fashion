@@ -8,6 +8,13 @@
   position: relative;
   border-radius: var(--br-regular);
   overflow: hidden;
+  aspect-ratio: 3.5 / 4;
+}
+
+.productImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .saleLabel {

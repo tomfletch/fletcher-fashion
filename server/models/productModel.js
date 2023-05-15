@@ -20,6 +20,10 @@ const productSchema = mongoose.Schema({
   discountPrice: {
     type: Number
   },
+  image: {
+    type: String,
+    required: true
+  }
 }, {
   timestamps: true
 });

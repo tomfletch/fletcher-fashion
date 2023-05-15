@@ -31,7 +31,7 @@ function CartPage() {
                 <tr key={item.product._id} className={styles.cartItem}>
                   <td>
                     <div className={styles.productImageContainer}>
-                      <img src={`https://picsum.photos/seed/${item.product._id}/350/400`} alt="" />
+                      <img src={`/images/${item.product.image}`} alt="" />
                     </div>
                   </td>
                   <td className={styles.productName}>{item.product.name}</td>
