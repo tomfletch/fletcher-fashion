@@ -45,7 +45,10 @@ function ProductListingPage({ filter }: ProductListingPageProps) {
 
   if (filters.price !== null) {
     const [minPrice, maxPrice] = filters.price;
-    filteredProducts = filteredProducts.filter((p) => p.price >= minPrice && p.price <= maxPrice);
+    filteredProducts = filteredProducts.filter((p) => {
+      const currentPrice = p.discountPrice || p.price;
+      return currentPrice >= minPrice && currentPrice <= maxPrice
+    });
   }
 
   if (filters.categories !== null) {
