@@ -14,6 +14,18 @@ function ActiveFilters({ filters, setFilters }: ActiveFiltersProps) {
     setFilters((prevFilters) => ({...prevFilters, price: null}))
   }
 
+  const removeCategoryFilter = (category: string) => {
+    setFilters((prevFilters) => {
+      let categories: string[] | null = prevFilters.categories?.filter((c) => c !== category) || [];
+
+      if (categories.length === 0) {
+        categories = null;
+      }
+
+      return {...prevFilters, categories };
+    });
+  }
+
   const filterChips = [];
 
   if (filters.price) {
@@ -26,6 +38,20 @@ function ActiveFilters({ filters, setFilters }: ActiveFiltersProps) {
         size="small"
       />
     );
+  }
+
+  if (filters.categories) {
+    filters.categories.forEach((category) => {
+      filterChips.push(
+        <Chip
+          key={`category-${category}`}
+          label={category}
+          onDelete={() => removeCategoryFilter(category)}
+          variant="outlined"
+          size="small"
+        />
+      );
+    })
   }
 
   if (filterChips.length === 0) {

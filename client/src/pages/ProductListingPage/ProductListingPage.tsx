@@ -13,12 +13,14 @@ type ProductListingPageProps = {
 
 export type Filters = {
   price: number[] | null;
+  categories: string[] | null;
 };
 
 function ProductListingPage({ filter }: ProductListingPageProps) {
   const [listType, setListType] = useState<'row' | 'grid'>('grid');
   const [filters, setFilters] = useState<Filters>({
-    price: null
+    price: null,
+    categories: null
   });
 
   const { isLoading, error, data: products } = useQuery({
@@ -34,9 +36,9 @@ function ProductListingPage({ filter }: ProductListingPageProps) {
   if (filter === 'sale') {
     pageProducts = products.filter((p) => !!p.discountPrice);
   } else if (filter === 'men') {
-    pageProducts = products.filter((p) => p.category === "Men's Clothing");
+    pageProducts = products.filter((p) => p.categories.includes("Men's Clothing"));
   } else if (filter === 'women') {
-    pageProducts = products.filter((p) => p.category === "Women's Clothing");
+    pageProducts = products.filter((p) => p.categories.includes("Women's Clothing"));
   }
 
   let filteredProducts = pageProducts;
@@ -44,6 +46,11 @@ function ProductListingPage({ filter }: ProductListingPageProps) {
   if (filters.price !== null) {
     const [minPrice, maxPrice] = filters.price;
     filteredProducts = filteredProducts.filter((p) => p.price >= minPrice && p.price <= maxPrice);
+  }
+
+  if (filters.categories !== null) {
+    const filterCategories = filters.categories;
+    filteredProducts = filteredProducts.filter((p) => p.categories.some((c) => filterCategories.includes(c)));
   }
 
   return (
