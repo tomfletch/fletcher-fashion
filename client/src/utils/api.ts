@@ -1,14 +1,15 @@
 import axios from 'axios';
-import { CartItem } from '../models/cart';
+import { CartItem, Cart } from '../models/cart';
+import { Product } from '../models/product';
 
 export function getProducts() {
-  return axios.get('/api/products').then((res) => res.data);
+  return axios.get<Product[]>('/api/products').then((res) => res.data);
 }
 
 export function getProduct(productId: string) {
-  return axios.get(`/api/products/${productId}`).then((res) => res.data);
+  return axios.get<Product>(`/api/products/${productId}`).then((res) => res.data);
 }
 
 export function updateCart(cartItems: CartItem[]) {
-  return axios.put(`/api/cart`, { items: cartItems }).then((res) => res.data);
+  return axios.put<Cart>(`/api/cart`, { items: cartItems }).then((res) => res.data);
 }

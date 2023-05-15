@@ -1,0 +1,11 @@
+.activeFilters {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.label {
+  font-weight: var(--fw-semibold);
+}

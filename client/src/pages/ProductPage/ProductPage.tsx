@@ -16,7 +16,7 @@ function ProductPage() {
   });
 
   if (isLoading) return <>Loading...</>;
-  if (error) return <>Error</>;
+  if (error || !product) return <>Error</>;
 
   const isOnSale = !!product.discountPrice;
   const currentPrice = product.discountPrice || product.price;

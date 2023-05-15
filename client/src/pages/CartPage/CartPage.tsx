@@ -13,7 +13,7 @@ function CartPage() {
     quantity: item.quantity
   }));
 
-  const { isLoading, data } = useQuery({
+  const { data } = useQuery({
     queryKey: ['updateCart', cartItems],
     queryFn: () => updateCart(cartItems)
   });
@@ -51,11 +51,13 @@ function CartPage() {
           </table>
           <div className={styles.totalPrice}>
             <span className={styles.label}>Order total:</span>
-            {isLoading ? (
-              <span>Loading...</span>
-            ) : (
-              <>{formatCurrency(data.totalPrice)}</>
-            )}
+            <span className={styles.value}>
+              {!data ? (
+                'Loading...'
+              ) : (
+                formatCurrency(data.totalPrice)
+              )}
+            </span>
           </div>
         </>
       )}

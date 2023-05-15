@@ -23,6 +23,7 @@
 
 .colPrice {
   text-align: right;
+  min-width: 100px;
 }
 
 .totalPrice {
@@ -33,4 +34,9 @@
 .totalPrice .label {
   font-weight: var(--fw-semibold);
   margin-right: 1rem;
+}
+
+.totalPrice .value {
+  display: inline-block;
+  min-width: 100px;
 }

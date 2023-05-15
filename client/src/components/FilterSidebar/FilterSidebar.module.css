@@ -1,0 +1,25 @@
+.filterSidebar {
+  position: sticky;
+  top: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: var(--br-regular);
+  font-size: 0.8rem;
+}
+
+.filterType {
+  background-color: #f4f4f4;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--br-small);
+  font-weight: var(--fw-semibold);
+}
+
+.filterValues {
+  padding: 0.5rem;
+}
+
+.sliderValues {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -0.75rem;
+}
