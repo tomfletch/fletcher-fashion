@@ -1,0 +1,15 @@
+.footer {
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: var(--clr-primary);
+}
+
+.logo {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+}
+
+.logo span {
+  font-weight: var(--fw-bold);
+}

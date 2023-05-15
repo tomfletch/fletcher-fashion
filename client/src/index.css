@@ -12,6 +12,11 @@
   --br-small: 0.25rem;
 }
 
+html {
+  /* Always show the scrollbar to avoid page horizontal jump */
+  overflow-y: scroll;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: var(--fw-regular);

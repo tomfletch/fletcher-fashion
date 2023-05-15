@@ -3,6 +3,8 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import Header from './components/Header/Header';
 import { Outlet } from 'react-router-dom';
 import { ShoppingCartProvider } from './context/ShoppingCardContext';
+import Footer from './components/Footer/Footer';
+import styles from './App.module.css';
 
 const queryClient = new QueryClient();
 
@@ -22,11 +24,14 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ShoppingCartProvider>
         <ThemeProvider theme={theme}>
-          <div className="App">
-            <Header />
-            <main className="container">
-              <Outlet />
-            </main>
+          <div className={styles.app}>
+            <div>
+              <Header />
+              <main className="container">
+                <Outlet />
+              </main>
+            </div>
+            <Footer />
           </div>
         </ThemeProvider>
       </ShoppingCartProvider>
