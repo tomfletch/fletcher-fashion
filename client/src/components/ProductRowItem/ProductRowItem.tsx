@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Product } from '../../models/product';
 import { formatCurrency } from '../../utils/currency';
 import styles from './ProductRowItem.module.css';
@@ -12,14 +13,16 @@ function ProductRowItem({ product }: ProductRowItemProps) {
 
   return (
     <div className={styles.productRowItem}>
-      <div className={styles.productImageContainer}>
-        <img src={`https://picsum.photos/seed/${product._id}/350/400`} alt="" />
-        {isOnSale && (
-          <div className={styles.saleLabel}>Sale</div>
-        )}
-      </div>
+      <Link to={`/products/${product._id}`}>
+        <div className={styles.productImageContainer}>
+          <img src={`https://picsum.photos/seed/${product._id}/350/400`} alt="" />
+          {isOnSale && (
+            <div className={styles.saleLabel}>Sale</div>
+          )}
+        </div>
+      </Link>
       <div className={styles.content}>
-        <div className={styles.productName}>{product.name}</div>
+        <Link className={styles.productName} to={`/products/${product._id}`}>{product.name}</Link>
         <p className={styles.description}>{product.description}</p>
         <div className={styles.price}>
           <div className={styles.currentPrice}>{formatCurrency(currentPrice)}</div>

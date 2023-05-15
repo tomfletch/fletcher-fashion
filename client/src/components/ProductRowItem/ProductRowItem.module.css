@@ -36,6 +36,12 @@
 .productName {
   font-size: 1.2rem;
   font-weight: var(--fw-bold);
+  color: var(--clr-text);
+  text-decoration: none;
+}
+
+.productName:hover, .productName:focus-visible {
+  color: var(--clr-primary);
 }
 
 .currentPrice {
